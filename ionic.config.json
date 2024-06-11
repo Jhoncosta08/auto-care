@@ -1,0 +1,7 @@
+{
+  "name": "auto-care",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
