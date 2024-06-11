@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RemoveBgService} from '../../../services/remove-bg.service';
+
 
 @Component({
   selector: 'app-add-car',
@@ -10,15 +11,18 @@ export class AddCarPage {
   carImg: string = '';
 
 
-  constructor(private removeBgService: RemoveBgService) { }
+  constructor(private removeBgService: RemoveBgService) {}
 
 
   onFileSelected(event: any): void {
     const file: File = event.target.files[0];
-    this.removeBgService.removeBackground(file).subscribe((result: Blob): void => {
-      const url: string = URL.createObjectURL(result);
-      console.log('url: ', url);
-      this.carImg = url;
+    this.removeBgService.removeBackground(file).subscribe({
+      next: (imgResult: Blob): void => {
+        this.carImg = URL.createObjectURL(imgResult);
+      },
+      error: err => {
+        console.error('Erro ao remover o fundo da imagem:', err);
+      }
     });
   }
 

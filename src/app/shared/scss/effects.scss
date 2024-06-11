@@ -37,3 +37,22 @@
   }
 }
 //----------------------------------------
+
+
+//SLIDE-TOP EFFECT
+.slide-top {
+  animation: slideTop 2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+//----------------------------------------

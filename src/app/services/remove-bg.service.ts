@@ -12,7 +12,6 @@ export class RemoveBgService {
   constructor(private http: HttpClient) { }
 
   removeBackground(image: File): Observable<Blob> {
-    console.log('img: ', image);
     const formData: FormData = new FormData();
     formData.append('image_file', image);
     formData.append('size', 'auto');
