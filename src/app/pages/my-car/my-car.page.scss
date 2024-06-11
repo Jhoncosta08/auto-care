@@ -1,0 +1,13 @@
+
+.car-card-container {
+  padding: 0;
+  background: linear-gradient(160deg, #bebebe 0%, rgb(0 0 0) 55%);
+}
+
+.car-card-img {
+  height: auto;
+  width: 100%;
+  max-width: 15rem;
+  margin: auto;
+  -webkit-box-reflect: below -10px linear-gradient(rgb(0 0 0 / 0%), rgb(0 0 0 / 8%), rgb(0 0 0 / 35%));
+}
