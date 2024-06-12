@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
+
   {
     path: '',
     redirectTo: 'my-car',
     pathMatch: 'full'
   },
+
   {
     path: 'my-car',
     children: [
@@ -16,11 +19,14 @@ const routes: Routes = [
       },
     ],
   },
+
   {
     path: 'add-car',
     loadChildren: () => import('./pages/car-pages/add-car/add-car.module').then(m => m.AddCarPageModule)
   },
+
 ];
+
 
 @NgModule({
   imports: [

@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-vehicle-review',
   templateUrl: './vehicle-review.page.html',
   styleUrls: ['./vehicle-review.page.scss'],
 })
-export class VehicleReviewPage implements OnInit {
+export class VehicleReviewPage {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

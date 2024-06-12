@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { AddCarPage } from './add-car.page';
+
 
 const routes: Routes = [
   {
@@ -9,6 +9,7 @@ const routes: Routes = [
     component: AddCarPage
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

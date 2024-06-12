@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MyCarPage } from './my-car.page';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -16,6 +17,7 @@ const routes: Routes = [
     loadChildren: () => import('../mechanical-services/mechanical-services.module').then( m => m.MechanicalServicesPageModule)
   },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
