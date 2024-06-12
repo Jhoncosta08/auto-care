@@ -1,2 +1,17 @@
-<input type="file" (change)="onFileSelected($event)">
-<ion-img [src]="carImg" />
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <input type="file" (change)="onFileSelected($event)">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-img [src]="carImg" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
