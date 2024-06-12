@@ -1,4 +1,7 @@
 
+$shadow: .3rem .3rem .6rem var(--ion-color-medium-tint), -.2rem -.2rem .5rem var(--ion-color-primary-contrast);
+$inner-shadow: inset .2rem .2rem .5rem var(--ion-color-medium-tint), inset -.2rem -.2rem .5rem var(--ion-color-primary-contrast);
+
 .car-footer {
   position: fixed;
   bottom: 0;
@@ -7,4 +10,22 @@
   height: 100%;
   max-height: 4rem;
   background-color: var(--ion-color-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 0 10px 2px var(--ion-color-tertiary);
+}
+
+.footer-nav-icon {
+  height: auto;
+  max-width: 2.5rem;
+  padding: 0.5rem;
+  box-shadow: $shadow;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer-nav-icon:active {
+  box-shadow: $inner-shadow;
 }

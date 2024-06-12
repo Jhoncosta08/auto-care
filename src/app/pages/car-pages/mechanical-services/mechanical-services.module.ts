@@ -4,17 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { MechanicalServicesPageRoutingModule } from './mechanical-services-routing.module';
 import { MechanicalServicesPage } from './mechanical-services.page';
+import {SharedModule} from '../../../shared/shared.module';
 
 
 @NgModule({
   declarations: [
     MechanicalServicesPage
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    MechanicalServicesPageRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        MechanicalServicesPageRoutingModule,
+        SharedModule
+    ]
 })
 export class MechanicalServicesPageModule {}
