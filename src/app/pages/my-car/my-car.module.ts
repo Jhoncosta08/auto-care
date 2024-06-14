@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { MyCarPageRoutingModule } from './my-car-routing.module';
 import { MyCarPage } from './my-car.page';
-import {SharedModule} from '../../../shared/shared.module';
-
+import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({
+  declarations: [
+    MyCarPage
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -15,6 +17,5 @@ import {SharedModule} from '../../../shared/shared.module';
     MyCarPageRoutingModule,
     SharedModule
   ],
-  declarations: [MyCarPage]
 })
 export class MyCarPageModule {}

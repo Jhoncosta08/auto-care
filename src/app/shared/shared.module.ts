@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import {IonicModule} from '@ionic/angular';
 import {CarFooterNavComponent} from './components/car-footer-nav/car-footer-nav.component';
 
-
 @NgModule({
   declarations: [
     CarFooterNavComponent

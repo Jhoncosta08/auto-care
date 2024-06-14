@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {RemoveBgService} from '../../../services/remove-bg.service';
-
+import {RemoveBgService} from '../../services/remove-bg.service';
 
 @Component({
   selector: 'app-add-car',
@@ -10,9 +9,7 @@ import {RemoveBgService} from '../../../services/remove-bg.service';
 export class AddCarPage {
   carImg: string = '';
 
-
   constructor(private removeBgService: RemoveBgService) {}
-
 
   onFileSelected(event: any): void {
     const file: File = event.target.files[0];
@@ -25,6 +22,5 @@ export class AddCarPage {
       }
     });
   }
-
 
 }
