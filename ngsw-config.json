@@ -25,6 +25,16 @@
           "/*.mp4"
         ]
       }
+    },
+    {
+      "name": "videos",
+      "installMode": "lazy",
+      "updateMode": "lazy",
+      "resources": {
+        "files": [
+          "/assets/videos/**"
+        ]
+      }
     }
   ]
 }
