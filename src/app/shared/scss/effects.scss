@@ -22,6 +22,61 @@
 
 
 
+//FADE-IN 3D ROTATING EFFECT
+@keyframes rotate3D {
+  from {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+
+.rotate-3D {
+  animation: rotate3D 3s linear;
+  transform-style: preserve-3d;
+}
+//----------------------------------------
+
+
+
+//FADE-IN EFFECT
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 3s ease-in-out;
+}
+//----------------------------------------
+
+
+//FADE-IN INFINITE ROTATING EFFECT
+@keyframes fadeInInfiniteRotate {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in-infinite-rotate {
+  animation: fadeInInfiniteRotate 2s ease-in-out infinite;
+}
+//----------------------------------------
+
+
+
 //SLIDE-IN EFFECT
 .slide-in {
   animation: slideIn 2s ease forwards;

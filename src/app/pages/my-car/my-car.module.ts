@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { MyCarPageRoutingModule } from './my-car-routing.module';
 import { MyCarPage } from './my-car.page';
 import {SharedModule} from '../../shared/shared.module';
+import {CarLogoPipe} from '../../pipes/car-logo.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {SharedModule} from '../../shared/shared.module';
     FormsModule,
     IonicModule,
     MyCarPageRoutingModule,
-    SharedModule
+    SharedModule,
+    CarLogoPipe
   ],
 })
 export class MyCarPageModule {}

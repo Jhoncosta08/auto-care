@@ -1,21 +1,58 @@
 <ion-content>
-  <ion-grid>
+  <ion-grid *ngIf="currentSelectedCar">
+
 
     <ion-row>
       <ion-col class="car-card-container">
-        <ion-img class="car-card-img zoom-in" [src]="'assets/images/default-car-img.png'" alt="user-car"/>
+        <ion-img class="car-card-img zoom-in" [src]="'assets/images/default-img-front.png'" alt="user-car"/>
       </ion-col>
     </ion-row>
+
+
+    <ion-row class="zoom-in car-model-name-box">
+      <ion-col class="ion-text-center">
+        <p class="car-title reflection">{{ currentSelectedCar.brand }}</p>
+      </ion-col>
+    </ion-row>
+
 
     <ion-row class="zoom-in">
+      <ion-col class="car-divider"></ion-col>
+    </ion-row>
+
+
+    <ion-row>
       <ion-col class="ion-text-center">
-        <p class="car-title reflection">MUSTANG GT</p>
+        <ion-img [src]="currentSelectedCar.brand | carLogo" class="my-car-brand rotate-3D"></ion-img>
+        <p class="car-model-name slide-top">{{ currentSelectedCar.model }}</p>
       </ion-col>
     </ion-row>
 
-    <ion-row class="slide-top">
-      <ion-col class="car-divider"></ion-col>
+
+    <ion-row>
+      <ion-col class="car-info-container slide-in">
+        <ion-row>
+          <ion-col class="ion-text-start"><p>Ano: </p></ion-col>
+          <ion-col class="ion-text-end"><p>{{ currentSelectedCar.yearOfManufacture }}</p></ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="ion-text-start"><p>Modelo: </p></ion-col>
+          <ion-col class="ion-text-end"><p>{{ currentSelectedCar.modelYear }}</p></ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="ion-text-start"><p>Cor: </p></ion-col>
+          <ion-col class="ion-text-end"><p>{{ currentSelectedCar.color }}</p></ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="ion-text-start"><p>Combustível: </p></ion-col>
+          <ion-col class="ion-text-end"><p>{{ currentSelectedCar.fuel }}</p></ion-col>
+        </ion-row>
+      </ion-col>
     </ion-row>
+
 
   </ion-grid>
 </ion-content>
