@@ -1,0 +1,34 @@
+
+
+.btn-common-styles {
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.secondary {
+  box-shadow: 2px 2px 5px 0 var(--ion-color-secondary);
+  background-color: #232323;
+  color: var(--ion-color-secondary);
+}
+
+.tertiary {
+  box-shadow: 2px 2px 5px 0 var(--ion-color-tertiary);
+  background-color: #232323;
+  color: var(--ion-color-tertiary);
+}
+
+.danger {
+  box-shadow: 2px 2px 5px 0 var(--ion-color-light);
+  background-color: var(--ion-color-danger);
+  color: var(--ion-color-light);
+}
+
+.warn {
+  box-shadow: 2px 2px 5px 0 var(--ion-color-light);
+  background-color: var(--ion-color-warning);
+  color: var(--ion-color-light);
+}

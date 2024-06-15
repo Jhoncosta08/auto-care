@@ -97,6 +97,46 @@
 
 
 
+//SLIDE IN RIGHT EFFECT
+.slide-in-right {
+  animation: slideInRight 2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+//----------------------------------------
+
+
+
+//SLIDE-BOTTOM EFFECT
+.slide-bottom {
+  animation: slideBottom 2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+//----------------------------------------
+
+
+
 //SLIDE-TOP EFFECT
 .slide-top {
   animation: slideTop 2s ease forwards;

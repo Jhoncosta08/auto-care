@@ -1,5 +1,16 @@
 @use "../../shared/scss/effects" as *;
 
+.splash-title {
+  padding: 1rem;
+  margin: 1rem 0;
+  & h1 {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-weight: 500;
+    color: var(--ion-color-secondary);
+  }
+}
+
 .background-video-container {
   position: fixed;
   top: 0;
@@ -31,7 +42,7 @@
   & p {
     font-size: 2rem;
     letter-spacing: 4px;
-    font-weight: 800;
+    font-weight: 500;
     color: var(--ion-color-secondary);
     margin-bottom: 3rem;
     -webkit-box-reflect: below -10px linear-gradient(rgb(0 0 0 / 0%), rgb(0 0 0 / 21%), rgb(0 0 0 / 26%));

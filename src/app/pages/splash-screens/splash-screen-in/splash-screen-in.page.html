@@ -3,9 +3,15 @@
 <ion-content>
   <ion-grid>
 
+    <ion-row class="splash-title ion-text-center slide-top">
+      <ion-col>
+        <h1>BEM VINDO</h1>
+      </ion-col>
+    </ion-row>
+
     <ion-row>
       <ion-col class="background-video-container">
-        <video autoplay [muted]="true" playsinline>
+        <video autoplay loop [muted]="true" playsinline>
           <source src="assets/videos/auto-care-splash-video.mp4" type="video/mp4">
         </video>
       </ion-col>
@@ -13,10 +19,10 @@
 
     <ion-row class="splash-screen-btn-container">
       <ion-col>
-        <p>AUTO CARE</p>
-        <div class="splash-screen-btn-box">
-          <button>ENTRAR</button>
-          <button>CADASTRAR</button>
+        <p class="fade-in">AUTO CARE</p>
+        <div class="splash-screen-btn-box slide-bottom">
+          <app-dynamic-btn [buttonText]="'ENTRAR'" [buttonType]="'secondary'" [buttonDisable]="false" (buttonAction)="this.navigateUserRoute('/login')"></app-dynamic-btn>
+          <app-dynamic-btn [buttonText]="'CADASTRAR'" [buttonType]="'secondary'" [buttonDisable]="false" (buttonAction)="this.navigateUserRoute('/sign-up')"></app-dynamic-btn>
         </div>
       </ion-col>
     </ion-row>
