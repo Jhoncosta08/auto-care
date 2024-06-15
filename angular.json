@@ -76,7 +76,8 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true,
-              "aot": false
+              "aot": false,
+              "outputHashing": "none"
             },
             "ci": {}
           },
