@@ -18,12 +18,9 @@
   src: url('./assets/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
 }
 
-body, ion-grid, ion-content, ion-row, ion-col {
+body, ion-content {
   background-color: var(--ion-color-primary);
-}
-
-ion-grid {
-  min-height: 100vh;
+  height: 100%;
 }
 
 ion-grid, p {

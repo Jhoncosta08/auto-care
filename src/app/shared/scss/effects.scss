@@ -6,6 +6,7 @@
   animation: zoomIn 4s ease forwards;
   transform-origin: center;
   opacity: 0;
+  will-change: transform;
 }
 
 @keyframes zoomIn {
@@ -37,6 +38,7 @@
 .rotate-3D {
   animation: rotate3D 3s linear;
   transform-style: preserve-3d;
+  will-change: transform;
 }
 //----------------------------------------
 
@@ -54,6 +56,7 @@
 
 .fade-in {
   animation: fadeIn 3s ease-in-out;
+  will-change: transform;
 }
 //----------------------------------------
 
@@ -72,6 +75,7 @@
 
 .fade-in-infinite-rotate {
   animation: fadeInInfiniteRotate 2s ease-in-out infinite;
+  will-change: transform;
 }
 //----------------------------------------
 
@@ -81,6 +85,7 @@
 .slide-in {
   animation: slideIn 2s ease forwards;
   opacity: 0;
+  will-change: transform;
 }
 
 @keyframes slideIn {
@@ -101,6 +106,7 @@
 .slide-in-right {
   animation: slideInRight 2s ease forwards;
   opacity: 0;
+  will-change: transform;
 }
 
 @keyframes slideInRight {
@@ -121,6 +127,7 @@
 .slide-bottom {
   animation: slideBottom 2s ease forwards;
   opacity: 0;
+  will-change: transform;
 }
 
 @keyframes slideBottom {
@@ -141,6 +148,7 @@
 .slide-top {
   animation: slideTop 2s ease forwards;
   opacity: 0;
+  will-change: transform;
 }
 
 @keyframes slideTop {
