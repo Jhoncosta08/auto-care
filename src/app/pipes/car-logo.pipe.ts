@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'carLogo',
-  standalone: true
+  standalone: true,
+  pure: true
 })
 export class CarLogoPipe implements PipeTransform {
   private path: string = 'assets/icon/car-brands';
