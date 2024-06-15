@@ -23,6 +23,11 @@ body, ion-content {
   height: 100%;
 }
 
+ion-grid {
+  background-color: var(--ion-color-primary);
+  height: 100%;
+}
+
 ion-grid, p {
   margin: 0;
   padding: 0;
