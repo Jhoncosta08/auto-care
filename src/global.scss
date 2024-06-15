@@ -18,6 +18,10 @@
   src: url('./assets/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
 }
 
+body {
+  background-color: var(--ion-color-primary);
+}
+
 ion-grid, p {
   margin: 0;
   padding: 0;
