@@ -1,5 +1,6 @@
 
 export const environment = {
+  production: false,
   firebase: {
     apiKey: "AIzaSyCSU53-z-WvfZ7O_isRCheBmDGHYMnVHZg",
     authDomain: "auto-care-essential.firebaseapp.com",
