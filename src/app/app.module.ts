@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 import {SharedModule} from './shared/shared.module';
+import {environment} from '../environments/environment';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -15,6 +19,9 @@ import {SharedModule} from './shared/shared.module';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     SharedModule
   ],
   providers: [
