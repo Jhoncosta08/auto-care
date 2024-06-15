@@ -5,14 +5,14 @@ import {CarFooterNavComponent} from './components/car-footer-nav/car-footer-nav.
 
 @NgModule({
   declarations: [
-    CarFooterNavComponent
+    CarFooterNavComponent,
   ],
   imports: [
     CommonModule,
     IonicModule
   ],
   exports: [
-    CarFooterNavComponent
+    CarFooterNavComponent,
   ]
 })
 export class SharedModule { }

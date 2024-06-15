@@ -6,7 +6,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'my-cars-list',
+    redirectTo: 'splash-screen-in',
     pathMatch: 'full'
   },
   {
@@ -28,6 +28,14 @@ const routes: Routes = [
   {
     path: 'add-car',
     loadChildren: () => import('./pages/add-car/add-car.module').then(m => m.AddCarPageModule)
+  },
+  {
+    path: 'splash-screen-in',
+    loadChildren: () => import('./pages/splash-screens/splash-screen-in/splash-screen-in.module').then( m => m.SplashScreenInPageModule)
+  },
+  {
+    path: 'splash-screen-out',
+    loadChildren: () => import('./pages/splash-screens/splash-screen-out/splash-screen-out.module').then( m => m.SplashScreenOutPageModule)
   },
 
 ];
