@@ -15,7 +15,7 @@ export class CarFooterNavComponent {
     private route: ActivatedRoute
   ) {}
 
-  moveRouteForward(selectedUrl: 'my-car' | 'vehicle-review' | 'mechanical-services'): void {
+  moveRouteForward(selectedUrl: 'my-car' | 'vehicle-review' | 'mechanical-services' | 'car-wash'): void {
     this.carIdParam = this.route.firstChild?.snapshot.paramMap.get('carId');
     if (this.carIdParam && selectedUrl) {
       const url: string = selectedUrl === 'my-car' ? `${selectedUrl}/${this.carIdParam}` : `my-car/${this.carIdParam}/${selectedUrl}`;
