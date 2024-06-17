@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-mechanical-service-detail',
   templateUrl: './mechanical-service-detail.page.html',
   styleUrls: ['./mechanical-service-detail.page.scss'],
 })
-export class MechanicalServiceDetailPage implements OnInit {
+export class MechanicalServiceDetailPage {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  ionViewWillEnter(): void {
+    const url: string | null = this.route.snapshot.paramMap.get('mechanicalServiceId');
+    console.log('url param: ', url);
   }
 
 }
