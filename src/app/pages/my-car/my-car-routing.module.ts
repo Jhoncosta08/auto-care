@@ -9,11 +9,15 @@ const routes: Routes = [
   },
   {
     path: 'mechanical-services',
-    loadChildren: () => import('../car-services-pages/mechanical-services/mechanical-services.module').then( m => m.MechanicalServicesPageModule)
+    loadChildren: () => import('../car-service/car-service.module').then( m => m.CarServicePageModule)
   },
   {
     path: 'vehicle-review',
-    loadChildren: () => import('../car-services-pages/vehicle-review/vehicle-review.module').then( m => m.VehicleReviewPageModule)
+    loadChildren: () => import('../car-service/car-service.module').then( m => m.CarServicePageModule)
+  },
+  {
+    path: 'car-wash',
+    loadChildren: () => import('../car-service/car-service.module').then( m => m.CarServicePageModule)
   },
 ];
 

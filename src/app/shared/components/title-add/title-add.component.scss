@@ -1,0 +1,20 @@
+
+.add-title-container {
+  padding-top: 1rem;
+}
+
+.add-title {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: var(--ion-color-secondary);
+  margin: 0;
+  padding: 0 0 0 1rem;
+}
+
+.add-icon {
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--ion-color-secondary);
+  color: var(--ion-color-primary);
+}

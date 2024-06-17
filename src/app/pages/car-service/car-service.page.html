@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-grid>
+
+    <app-simple-spinner *ngIf="showSpinner"></app-simple-spinner>
+
+    <ion-row *ngIf="!showSpinner">
+      <ion-col *ngIf="carServiceList.length <= 0" style="text-align: center; margin-top: 1rem">
+        <ion-text [color]="'secondary'">Nenhum serviço encontrado</ion-text>
+      </ion-col>
+
+      <ion-col *ngIf="carServiceList.length > 0">
+        <app-title-add [title]="carServiceTitle" (buttonAction)="addCarService()"></app-title-add>
+        <app-service-card [carService]="carServiceList" (clickedCarService)="goToCarServiceDetailPage($event)"></app-service-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

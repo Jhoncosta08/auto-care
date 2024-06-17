@@ -8,6 +8,7 @@ export class MechanicalService {
   carServicesList: IServiceCarInterface[] = [
     {
       id: 'mechanicalServiceId-1',
+      serviceType: 'mechanical',
       serviceDate: '30/06/2024',
       serviceInfo: [
         {
@@ -28,6 +29,7 @@ export class MechanicalService {
     },
     {
       id: 'mechanicalServiceId-2',
+      serviceType: 'mechanical',
       serviceDate: '01/07/2024',
       serviceInfo: [
         {

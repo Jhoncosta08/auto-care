@@ -7,34 +7,36 @@ import {IServiceCarInterface} from '../../interfaces/service.interface';
 export class CarWashService {
   carServicesList: IServiceCarInterface[] = [
     {
-      id: 'mechanicalServiceId-1',
+      id: 'carWashId-1',
       serviceDate: '30/06/2024',
+      serviceType: 'car-wash',
       serviceInfo: [
         {
-          serviceShopName: 'Mecânica Fortaleza',
-          serviceAttendantName: 'Marcelo',
-          serviceName: 'Vazamento na tampa da junta de válvula',
-          serviceDescription: 'Foi constatado um vazamento de óleo na junta da tampa de válvula, precisou ser trocada.',
+          serviceShopName: 'Amorin Higienização',
+          serviceAttendantName: 'Amorin',
+          serviceName: 'Limpeza externa',
+          serviceDescription: 'Foi feita uma limpeza externa, com shampoo neutro, foi passado cera',
           servicePrice: 201.50
         },
         {
-          serviceShopName: 'Mecânica Fortaleza',
-          serviceAttendantName: 'Marcelo',
-          serviceName: 'Vazamento de liquido de arrefecimento',
-          serviceDescription: 'Foi constatado um vazamento de liquido de arrefecimento, foi trocado uma mangueira',
+          serviceShopName: 'Amorin Higienização',
+          serviceAttendantName: 'Amorin',
+          serviceName: 'Lavagem de rodas',
+          serviceDescription: 'Foi lavado as rodas do carro, foi passado um produto para limpeza e feito uma restauração nas rodas',
           servicePrice: 15000.50
         }
       ]
     },
     {
-      id: 'mechanicalServiceId-2',
+      id: 'carWashId-2',
       serviceDate: '01/07/2024',
+      serviceType: 'car-wash',
       serviceInfo: [
         {
-          serviceShopName: 'Mecânica Fortaleza',
-          serviceAttendantName: 'Marcelo',
-          serviceName: 'Vazamento de ar',
-          serviceDescription: 'Foi constatado um vazamento de ar do coletor do motor, foi preciso trocar uma presilha',
+          serviceShopName: 'Amorin Higienização',
+          serviceAttendantName: 'Amorin',
+          serviceName: 'Limpeza interna',
+          serviceDescription: 'Foi feito uma limpeza completa dentro do carro, foi passado limpa plásticos e uma sera de plásticos.',
           servicePrice: 150
         }
       ]

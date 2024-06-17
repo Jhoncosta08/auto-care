@@ -1,5 +1,6 @@
 export interface IServiceCarInterface {
   id?: string,
+  serviceType: 'mechanical' | 'vehicle-review' | 'car-wash' | 'others',
   serviceDate: string,
   nextServiceDate?: string,
   serviceInfo: IServiceInfo[]

@@ -7,34 +7,38 @@ import {IServiceCarInterface} from '../../interfaces/service.interface';
 export class VehicleReviewService {
   carServicesList: IServiceCarInterface[] = [
     {
-      id: 'mechanicalServiceId-1',
+      id: 'vehicleReviewServiceId-1',
+      serviceType: 'vehicle-review',
       serviceDate: '30/06/2024',
+      nextServiceDate: '30/12/2024',
       serviceInfo: [
         {
           serviceShopName: 'Mecânica Fortaleza',
           serviceAttendantName: 'Marcelo',
-          serviceName: 'Vazamento na tampa da junta de válvula',
-          serviceDescription: 'Foi constatado um vazamento de óleo na junta da tampa de válvula, precisou ser trocada.',
+          serviceName: 'Troca de óleo',
+          serviceDescription: 'Foi trocado o óleo do carro',
           servicePrice: 201.50
         },
         {
           serviceShopName: 'Mecânica Fortaleza',
           serviceAttendantName: 'Marcelo',
-          serviceName: 'Vazamento de liquido de arrefecimento',
-          serviceDescription: 'Foi constatado um vazamento de liquido de arrefecimento, foi trocado uma mangueira',
+          serviceName: 'Troca de filtro',
+          serviceDescription: 'Foi trocado o filtro de óleo',
           servicePrice: 15000.50
         }
       ]
     },
     {
-      id: 'mechanicalServiceId-2',
+      id: 'vehicleReviewServiceId-2',
+      serviceType: 'vehicle-review',
       serviceDate: '01/07/2024',
+      nextServiceDate: '01/01/2024',
       serviceInfo: [
         {
           serviceShopName: 'Mecânica Fortaleza',
           serviceAttendantName: 'Marcelo',
-          serviceName: 'Vazamento de ar',
-          serviceDescription: 'Foi constatado um vazamento de ar do coletor do motor, foi preciso trocar uma presilha',
+          serviceName: 'Troca de filtro',
+          serviceDescription: 'Foi trocado o filtro de ar do carro',
           servicePrice: 150
         }
       ]

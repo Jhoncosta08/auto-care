@@ -44,4 +44,8 @@ export class MyCarsListPage{
     }
   }
 
+  addNewVehicle(): void {
+    console.log('addNewVehicle');
+  }
+
 }

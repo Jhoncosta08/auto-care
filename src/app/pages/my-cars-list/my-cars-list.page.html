@@ -3,6 +3,7 @@
   <app-simple-spinner *ngIf="showSpinner"></app-simple-spinner>
 
   <ion-grid *ngIf="!showSpinner && userCarList.length > 0" class="my-cars-list-grid">
+    <app-title-add [title]="'Meus Veículos'" (buttonAction)="addNewVehicle()"></app-title-add>
     <ion-row *ngFor="let car of userCarList">
       <ion-col>
         <app-car-card-list-item [userCar]="car" (clickedCar)="goToCarDetail($event)"></app-car-card-list-item>
