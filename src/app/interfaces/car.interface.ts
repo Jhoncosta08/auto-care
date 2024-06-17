@@ -1,6 +1,6 @@
 import {ICarBrandType} from '../types/car-brands.type';
 
-export interface ICar {
+export interface ICarInterface {
   id?: string,
   brand: ICarBrandType,
   model: string,

@@ -11,7 +11,6 @@ export class SplashScreenInPage {
 
   constructor(private navControl: NavController) { }
 
-  //IONIC START LIFECYCLE METHOD
   ionViewWillEnter(): void {
     this.isLoggedUser = this.checkLoggedUser()
   }

@@ -1,0 +1,10 @@
+
+<ion-row *ngIf="date" class="group-date ion-align-items-center">
+  <ion-col size="1">
+    <ion-icon name="calendar-outline" [color]="'secondary'"></ion-icon>
+  </ion-col>
+
+  <ion-col>
+    <p>{{ date.substring(3, 10) }}</p>
+  </ion-col>
+</ion-row>

@@ -1,0 +1,19 @@
+
+.mec-service-card {
+  margin: 1rem;
+  background: linear-gradient(150deg, #a6a6a6 0, rgb(0, 0, 0) 60%);
+  box-shadow: 3px 3px 5px -1px var(--ion-color-secondary);
+}
+
+.service-name {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: var(--ion-color-secondary);
+}
+
+.service-price {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ion-color-tertiary);
+}

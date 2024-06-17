@@ -6,13 +6,17 @@ import {DynamicBtnComponent} from './components/dynamic-btn/dynamic-btn.componen
 import {SimpleSpinnerComponent} from './components/simple-spinner/simple-spinner.component';
 import {CarCardListItemComponent} from './components/car-card-list-item/car-card-list-item.component';
 import {CarLogoPipe} from '../pipes/car-logo.pipe';
+import {DateGroupItemComponent} from './components/car-services-components/date-group-item/date-group-item.component';
+import {ServiceCardComponent} from './components/car-services-components/service-card/service-card.component';
 
 @NgModule({
   declarations: [
     CarFooterNavComponent,
     DynamicBtnComponent,
     SimpleSpinnerComponent,
-    CarCardListItemComponent
+    CarCardListItemComponent,
+    DateGroupItemComponent,
+    ServiceCardComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +27,9 @@ import {CarLogoPipe} from '../pipes/car-logo.pipe';
     CarFooterNavComponent,
     DynamicBtnComponent,
     SimpleSpinnerComponent,
-    CarCardListItemComponent
+    CarCardListItemComponent,
+    DateGroupItemComponent,
+    ServiceCardComponent
   ]
 })
 export class SharedModule { }

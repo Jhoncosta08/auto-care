@@ -14,14 +14,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/my-car/my-car.module').then(m => m.MyCarPageModule),
   },
   {
-    path: 'vehicle-review/:carId',
-    loadChildren: () => import('./pages/vehicle-review/vehicle-review.module').then( m => m.VehicleReviewPageModule)
-  },
-  {
-    path: 'mechanical-services/:carId',
-    loadChildren: () => import('./pages/mechanical-services/mechanical-services.module').then( m => m.MechanicalServicesPageModule)
-  },
-  {
     path: 'my-cars-list',
     loadChildren: () => import('./pages/my-cars-list/my-cars-list.module').then(m => m.MyCarsListPageModule)
   },

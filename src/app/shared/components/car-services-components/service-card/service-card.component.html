@@ -1,0 +1,23 @@
+
+<ion-row *ngFor="let mecService of carService">
+  <ion-col class="mec-service-card">
+    <app-date-group-item [date]="mecService.serviceDate"></app-date-group-item>
+
+    <ion-row *ngFor="let mecServiceInfo of mecService.serviceInfo" class="ion-align-items-center ion-margin-top">
+      <ion-col size="9" class="ion-text-start">
+        <p class="service-name">{{ mecServiceInfo.serviceName }}</p>
+      </ion-col>
+
+      <ion-col class="ion-text-center">
+        <p class="service-price">${{ mecServiceInfo.servicePrice.toFixed(2) }}</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-margin-top ion-margin-bottom">
+      <ion-col class="ion-text-center">
+        <app-dynamic-btn [buttonText]="'VER MAIS'" [buttonType]="'outline'" [buttonDisable]="false" (buttonAction)="clickedCarService.emit(mecService)"></app-dynamic-btn>
+      </ion-col>
+    </ion-row>
+
+  </ion-col>
+</ion-row>

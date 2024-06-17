@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ICar} from '../../interfaces/car.interface';
+import {ICarInterface} from '../../interfaces/car.interface';
 
 @Component({
   selector: 'app-my-car',
@@ -7,7 +7,7 @@ import {ICar} from '../../interfaces/car.interface';
   styleUrls: ['./my-car.page.scss'],
 })
 export class MyCarPage {
-  currentSelectedCar: ICar = {
+  currentSelectedCar: ICarInterface = {
     id: '1',
     brand: 'lamborghini',
     model: 'Aventador',

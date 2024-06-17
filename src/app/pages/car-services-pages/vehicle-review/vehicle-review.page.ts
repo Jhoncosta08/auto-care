@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-vehicle-review',
-  templateUrl: './vehicle-review.page.html',
-  styleUrls: ['./vehicle-review.page.scss'],
+  templateUrl: './vehicle-review.page.html'
 })
 export class VehicleReviewPage {
 

@@ -1,0 +1,5 @@
+<ion-content>
+  <ion-grid *ngIf="carServicesList.length > 0">
+    <app-service-card [carService]="carServicesList" (clickedCarService)="goToMechanicalServiceDetailPage($event)"></app-service-card>
+  </ion-grid>
+</ion-content>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {NavController} from '@ionic/angular';
-import {ICar} from '../../interfaces/car.interface';
+import {ICarInterface} from '../../interfaces/car.interface';
 
 @Component({
   selector: 'app-my-cars-list',
@@ -8,7 +8,7 @@ import {ICar} from '../../interfaces/car.interface';
   styleUrls: ['./my-cars-list.page.scss'],
 })
 export class MyCarsListPage{
-  userCarList: ICar[] = [
+  userCarList: ICarInterface[] = [
     {
       id: '1',
       brand: 'lamborghini',
@@ -38,7 +38,7 @@ export class MyCarsListPage{
     setTimeout((): boolean => this.showSpinner = false, 1000);
   }
 
-  goToCarDetail(car: ICar):void  {
+  goToCarDetail(car: ICarInterface):void  {
     if (car && car.id) {
       void this.navControl.navigateForward(`my-car/${car.id}`);
     }
