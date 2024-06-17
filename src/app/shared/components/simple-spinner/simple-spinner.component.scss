@@ -1,0 +1,34 @@
+
+.spinner-row, .spinner-col {
+  width: 100%;
+  height: 100%;
+  background-color: var(--ion-color-primary);
+}
+
+.spinner-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-img {
+  width: auto;
+  height: 100%;
+  max-height: 5rem;
+}
+
+//FADE-IN INFINITE ROTATING EFFECT
+@keyframes fadeInInfiniteRotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.fade-in-infinite-rotate {
+  animation: fadeInInfiniteRotate 2s linear infinite;
+  will-change: transform;
+}
+//----------------------------------------

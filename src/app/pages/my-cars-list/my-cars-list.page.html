@@ -1,11 +1,13 @@
 <ion-content>
-  <ion-grid>
 
-    <ion-row>
+  <app-simple-spinner *ngIf="showSpinner"></app-simple-spinner>
+
+  <ion-grid *ngIf="!showSpinner && userCarList.length > 0" class="my-cars-list-grid">
+    <ion-row *ngFor="let car of userCarList">
       <ion-col>
-        <ion-button (click)="goToCarDetail('1')" [color]="'secondary'">My car 1</ion-button>
+        <app-car-card-list-item [userCar]="car" (clickedCar)="goToCarDetail($event)"></app-car-card-list-item>
       </ion-col>
     </ion-row>
-
   </ion-grid>
+
 </ion-content>

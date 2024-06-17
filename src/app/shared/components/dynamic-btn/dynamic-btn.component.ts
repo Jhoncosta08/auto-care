@@ -7,7 +7,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class DynamicBtnComponent {
   @Input({required: true}) buttonText: string = 'BUTTON';
-  @Input({required: true}) buttonType: 'secondary' | 'tertiary' | 'danger' | 'warn' = 'secondary';
+  @Input({required: true}) buttonType: 'outline' | 'secondary' | 'tertiary' | 'danger' | 'warn' = 'secondary';
   @Input({required: true}) buttonDisable: boolean = false;
   @Output() buttonAction: EventEmitter<void> = new EventEmitter();
 }

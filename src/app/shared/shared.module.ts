@@ -3,19 +3,27 @@ import { CommonModule } from '@angular/common';
 import {IonicModule} from '@ionic/angular';
 import {CarFooterNavComponent} from './components/car-footer-nav/car-footer-nav.component';
 import {DynamicBtnComponent} from './components/dynamic-btn/dynamic-btn.component';
+import {SimpleSpinnerComponent} from './components/simple-spinner/simple-spinner.component';
+import {CarCardListItemComponent} from './components/car-card-list-item/car-card-list-item.component';
+import {CarLogoPipe} from '../pipes/car-logo.pipe';
 
 @NgModule({
   declarations: [
     CarFooterNavComponent,
-    DynamicBtnComponent
+    DynamicBtnComponent,
+    SimpleSpinnerComponent,
+    CarCardListItemComponent
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    CarLogoPipe
   ],
   exports: [
     CarFooterNavComponent,
-    DynamicBtnComponent
+    DynamicBtnComponent,
+    SimpleSpinnerComponent,
+    CarCardListItemComponent
   ]
 })
 export class SharedModule { }

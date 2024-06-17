@@ -1,0 +1,20 @@
+
+<ion-row *ngIf="userCar">
+  <ion-col class="car-list-container">
+
+    <div class="car-list-brand">
+      <ion-thumbnail>
+        <ion-img [src]="userCar.brand | carLogo" [alt]="userCar.brand" />
+      </ion-thumbnail>
+    </div>
+
+    <div class="car-list-model-box">
+      <p>{{ userCar.model }}</p>
+    </div>
+
+    <div class="car-list-btn-box">
+      <app-dynamic-btn [buttonDisable]="false" [buttonType]="'outline'" [buttonText]="'VER MAIS'" (buttonAction)="clickedCar.emit(userCar)"></app-dynamic-btn>
+    </div>
+
+  </ion-col>
+</ion-row>

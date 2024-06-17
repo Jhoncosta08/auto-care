@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {NavController} from '@ionic/angular';
+import {ICar} from '../../interfaces/car.interface';
 
 @Component({
   selector: 'app-my-cars-list',
@@ -7,14 +8,39 @@ import {NavController} from '@ionic/angular';
   styleUrls: ['./my-cars-list.page.scss'],
 })
 export class MyCarsListPage{
+  userCarList: ICar[] = [
+    {
+      id: '1',
+      brand: 'lamborghini',
+      model: 'Aventador',
+      yearOfManufacture: '2011',
+      modelYear: '2012',
+      color: 'Preto',
+      fuel: 'Gasolina',
+    },
+    {
+      id: '2',
+      brand: 'fiat',
+      model: 'uno',
+      yearOfManufacture: '2012',
+      modelYear: '2013',
+      color: 'Prata',
+      fuel: 'Gasolina',
+    }
+  ];
+  showSpinner: boolean = true;
 
   constructor(
     private navControl: NavController
   ) { }
 
-  goToCarDetail(carId: string):void  {
-    if (carId) {
-      void this.navControl.navigateForward(`my-car/${carId}`);
+  ionViewWillEnter(): void {
+    setTimeout((): boolean => this.showSpinner = false, 1000);
+  }
+
+  goToCarDetail(car: ICar):void  {
+    if (car && car.id) {
+      void this.navControl.navigateForward(`my-car/${car.id}`);
     }
   }
 
