@@ -1,14 +1,12 @@
 <ion-content>
   <ion-grid class="auth-grid">
 
-    <ion-row class="auth-title-container">
-      <ion-col>
+    <ion-row class="auth-form">
+      <ion-col size="12" class="ion-text-center">
         <h1>LOGIN</h1>
       </ion-col>
-    </ion-row>
 
-    <ion-row class="auth-form">
-      <ion-col>
+      <ion-col size="12">
         <form [formGroup]="loginForm">
           <ion-input [color]="'secondary'" formControlName="email" class="ion-margin-top ion-margin-bottom" type="email" label="Email" labelPlacement="stacked" errorText="email inválido" email></ion-input>
 
@@ -19,12 +17,14 @@
           <app-dynamic-btn [buttonType]="'submit'" [buttonDisable]="loginForm.invalid" [buttonStyle]="'outline'" [buttonText]="'ENTRAR'" [fullWidth]="true"></app-dynamic-btn>
         </form>
       </ion-col>
-    </ion-row>
 
-    <ion-row>
-      <ion-col class="ion-text-center">
-        <p class="google-login-title">Login com o google</p>
-        <ion-icon name="logo-google" class="google-login-icon"></ion-icon>
+      <ion-col class="ion-text-end" size="12">
+        <ion-text class="auth-link-label">Não possui uma conta?</ion-text>
+        <a class="auth-link">Cadastre-se</a>
+      </ion-col>
+
+      <ion-col size="12" class="ion-text-center forgot-password-box">
+        <a class="auth-link">Esqueci a senha</a>
       </ion-col>
     </ion-row>
 
