@@ -1,7 +1,8 @@
 <button
   class="btn-common-styles"
-  [class]="buttonType"
-  [ngStyle]="{'opacity': buttonDisable ? '0.3' : ''}"
+  [type]="buttonType"
+  [class]="buttonStyle"
+  [ngStyle]="{'opacity': buttonDisable ? '0.3' : '', 'width': fullWidth ? '100%' : ''}"
   [disabled]="buttonDisable"
   (click)="buttonAction.emit()">
   {{ buttonText }}

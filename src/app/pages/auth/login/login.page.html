@@ -1,0 +1,32 @@
+<ion-content>
+  <ion-grid class="auth-grid">
+
+    <ion-row class="auth-title-container">
+      <ion-col>
+        <h1>LOGIN</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="auth-form">
+      <ion-col>
+        <form [formGroup]="loginForm">
+          <ion-input [color]="'secondary'" formControlName="email" class="ion-margin-top ion-margin-bottom" type="email" label="Email" labelPlacement="stacked" errorText="email inválido" email></ion-input>
+
+          <ion-input [color]="'secondary'" formControlName="password" class="ion-margin-top ion-margin-bottom" type="password" label="Senha" labelPlacement="stacked" errorText="senha inválida">
+            <ion-input-password-toggle slot="end" [color]="'secondary'"></ion-input-password-toggle>
+          </ion-input>
+
+          <app-dynamic-btn [buttonType]="'submit'" [buttonDisable]="loginForm.invalid" [buttonStyle]="'outline'" [buttonText]="'ENTRAR'" [fullWidth]="true"></app-dynamic-btn>
+        </form>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <p class="google-login-title">Login com o google</p>
+        <ion-icon name="logo-google" class="google-login-icon"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
