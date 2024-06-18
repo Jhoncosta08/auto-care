@@ -26,6 +26,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/auth/sign-up/sign-up.module').then( m => m.SignUpPageModule)
   },
   {
+    path: 'forgot-password',
+    loadChildren: () => import('./pages/auth/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
     path: 'my-car/:carId',
     loadChildren: () => import('./pages/my-car/my-car.module').then(m => m.MyCarPageModule),
   },

@@ -1,30 +1,32 @@
-<ion-content>
-  <ion-grid class="auth-grid">
 
-    <ion-row class="auth-form">
-      <ion-col size="12" class="ion-text-center">
+<ion-content>
+  <ion-grid>
+
+    <ion-row>
+      <ion-col class="auth-title-container">
         <h1>LOGIN</h1>
       </ion-col>
+    </ion-row>
 
-      <ion-col size="12">
-        <form [formGroup]="loginForm">
-          <ion-input [color]="'secondary'" formControlName="email" class="ion-margin-top ion-margin-bottom" type="email" label="Email" labelPlacement="stacked" errorText="email inválido" email></ion-input>
+    <ion-row class="auth-form-container">
+      <ion-col>
+        <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+          <ion-input formControlName="email" type="email" label="Email" labelPlacement="stacked" errorText="email inválido" email></ion-input>
 
-          <ion-input [color]="'secondary'" formControlName="password" class="ion-margin-top ion-margin-bottom" type="password" label="Senha" labelPlacement="stacked" errorText="senha inválida">
-            <ion-input-password-toggle slot="end" [color]="'secondary'"></ion-input-password-toggle>
+          <ion-input formControlName="password" type="password" label="Senha" labelPlacement="stacked" errorText="senha inválida">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
 
-          <app-dynamic-btn [buttonType]="'submit'" [buttonDisable]="loginForm.invalid" [buttonStyle]="'outline'" [buttonText]="'ENTRAR'" [fullWidth]="true"></app-dynamic-btn>
+          <app-dynamic-btn [buttonType]="'submit'" [buttonDisable]="loginForm.invalid" [buttonStyle]="'outline-black'" [buttonText]="'ENTRAR'" [fullWidth]="true"></app-dynamic-btn>
+
+          <div class="auth-link-container">
+            <ion-text class="auth-link-label">Não possui uma conta?<a class="auth-link" (click)="moveRouteForward('sign-up')">Cadastre-se</a></ion-text>
+          </div>
         </form>
       </ion-col>
 
-      <ion-col class="ion-text-end" size="12">
-        <ion-text class="auth-link-label">Não possui uma conta?</ion-text>
-        <a class="auth-link">Cadastre-se</a>
-      </ion-col>
-
-      <ion-col size="12" class="ion-text-center forgot-password-box">
-        <a class="auth-link">Esqueci a senha</a>
+      <ion-col class="forgot-password-container" size="12">
+        <a class="auth-link" (click)="moveRouteForward('forgot-password')">Esqueci a senha</a>
       </ion-col>
     </ion-row>
 
