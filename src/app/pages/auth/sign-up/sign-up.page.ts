@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NavController} from '@ionic/angular';
+import {IUserInterface} from '../../../interfaces/user.interface';
+import {AuthService} from '../../../services/auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,9 +13,13 @@ export class SignUpPage {
   signUpForm: FormGroup;
   isPasswordValid: boolean = true;
 
-  constructor(private fb: FormBuilder, private navControl: NavController) {
+  constructor(
+    private fb: FormBuilder,
+    private navControl: NavController,
+    private authService: AuthService,
+  ) {
     this.signUpForm = this.fb.group({
-      userName: ['', [Validators.required]],
+      displayName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
       confirmPassword: ['', [Validators.required]],
@@ -30,8 +36,11 @@ export class SignUpPage {
   }
 
   onSignUpSubmit(): void {
-    if (this.signUpForm.invalid && this.isPasswordValid) {
-      console.log('form: ', this.signUpForm.value);
+    const userData: IUserInterface = this.signUpForm.value;
+    if (this.signUpForm.valid && this.isPasswordValid && userData) {
+      this.authService.registerUser(userData).then((): void  => {
+        void this.navControl.navigateForward('my-cars-list');
+      });
     }
   }
 

@@ -1,7 +1,8 @@
 export interface IUserInterface {
-  id?: string,
-  username: string,
+  uid?: string,
+  displayName: string,
   email: string,
-  password: string,
+  password?: string,
   confirmPassword?: string,
+  createdAt?: string,
 }

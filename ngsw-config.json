@@ -41,7 +41,7 @@
     {
       "name": "api-cache",
       "urls": [
-        "/api/**"
+        "/firebase/**"
       ],
       "cacheConfig": {
         "maxSize": 100,

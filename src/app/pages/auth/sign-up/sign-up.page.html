@@ -11,9 +11,9 @@
     <ion-row class="auth-form-container">
       <ion-col>
         <form [formGroup]="signUpForm" (ngSubmit)="onSignUpSubmit()">
-          <ion-input formControlName="userName" type="text" label="Nome" labelPlacement="stacked" errorText="campo obrigatório"></ion-input>
+          <ion-input formControlName="displayName" type="text" label="Nome" labelPlacement="stacked" errorText="campo obrigatório"></ion-input>
 
-          <ion-input formControlName="email" type="email" label="Email" labelPlacement="stacked" errorText="email inválido" email></ion-input>
+          <ion-input formControlName="email" type="email" label="Email" labelPlacement="stacked" errorText="email inválido"></ion-input>
 
           <ion-input formControlName="password" type="password" label="Senha" labelPlacement="stacked" errorText="senha inválida">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
@@ -23,7 +23,7 @@
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
 
-          <app-dynamic-btn [buttonType]="'submit'" [buttonDisable]="signUpForm.invalid || isPasswordValid" [buttonStyle]="'outline-black'" [buttonText]="'ENTRAR'" [fullWidth]="true"></app-dynamic-btn>
+          <app-dynamic-btn [buttonType]="'submit'" [buttonDisable]="signUpForm.invalid || !isPasswordValid" [buttonStyle]="'outline-black'" [buttonText]="'ENTRAR'" [fullWidth]="true"></app-dynamic-btn>
 
           <ion-text [color]="'danger'" *ngIf="!isPasswordValid" class="password-valid-hint">As senhas estão diferentes</ion-text>
 

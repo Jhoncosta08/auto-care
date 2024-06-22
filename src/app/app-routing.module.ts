@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {AuthGuard} from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -32,14 +33,17 @@ const routes: Routes = [
   {
     path: 'my-car/:carId',
     loadChildren: () => import('./pages/my-car/my-car.module').then(m => m.MyCarPageModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'my-cars-list',
-    loadChildren: () => import('./pages/my-cars-list/my-cars-list.module').then(m => m.MyCarsListPageModule)
+    loadChildren: () => import('./pages/my-cars-list/my-cars-list.module').then(m => m.MyCarsListPageModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'add-car',
-    loadChildren: () => import('./pages/add-car/add-car.module').then(m => m.AddCarPageModule)
+    loadChildren: () => import('./pages/add-car/add-car.module').then(m => m.AddCarPageModule),
+    canActivate: [AuthGuard],
   },
 
 ];
