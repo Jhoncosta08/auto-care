@@ -10,20 +10,22 @@
 
     <ion-row class="auth-form-container">
       <ion-col>
-        <form [formGroup]="signUpForm" (ngSubmit)="onSignUpSubmit()">
+        <form [formGroup]="signUpForm" (ngSubmit)="onSignUpSubmit($event)">
           <ion-input formControlName="displayName" type="text" label="Nome" labelPlacement="stacked" errorText="campo obrigatório"></ion-input>
 
           <ion-input formControlName="email" type="email" label="Email" labelPlacement="stacked" errorText="email inválido"></ion-input>
 
-          <ion-input formControlName="password" type="password" label="Senha" labelPlacement="stacked" errorText="senha inválida">
+          <ion-input formControlName="password" type="password" label="Senha" labelPlacement="stacked" errorText="senha inválida" (keyup)="checkPasswordLength()" style="margin: 0">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
+          <ion-text *ngIf="showPasswordLengthHint" [color]="'danger'" class="password-valid-hint" style="margin-bottom: 1rem">A senha deve ter no mínimo 6 caracteres</ion-text>
 
           <ion-input formControlName="confirmPassword" type="password" label="Confimar senha" labelPlacement="stacked" errorText="senha inválida" (keyup)="checkThePasswords()">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
 
-          <app-dynamic-btn [buttonType]="'submit'" [buttonDisable]="signUpForm.invalid || !isPasswordValid" [buttonStyle]="'outline-black'" [buttonText]="'ENTRAR'" [fullWidth]="true"></app-dynamic-btn>
+          <app-dynamic-btn *ngIf="!showAuthSpinner" [buttonType]="'submit'" [buttonDisable]="signUpForm.invalid || !isPasswordValid" [buttonStyle]="'outline-black'" [buttonText]="'ENTRAR'" [fullWidth]="true"></app-dynamic-btn>
+          <ion-spinner *ngIf="showAuthSpinner" class="auth-login-spinner"></ion-spinner>
 
           <ion-text [color]="'danger'" *ngIf="!isPasswordValid" class="password-valid-hint">As senhas estão diferentes</ion-text>
 

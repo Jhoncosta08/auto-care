@@ -10,14 +10,15 @@
 
     <ion-row class="auth-form-container">
       <ion-col>
-        <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+        <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit($event)">
           <ion-input formControlName="email" type="email" label="Email" labelPlacement="stacked" errorText="email inválido" email></ion-input>
 
           <ion-input formControlName="password" type="password" label="Senha" labelPlacement="stacked" errorText="senha inválida">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
 
-          <app-dynamic-btn [buttonType]="'submit'" [buttonDisable]="loginForm.invalid" [buttonStyle]="'outline-black'" [buttonText]="'ENTRAR'" [fullWidth]="true"></app-dynamic-btn>
+          <app-dynamic-btn *ngIf="!showAuthSpinner" [buttonType]="'submit'" [buttonDisable]="loginForm.invalid" [buttonStyle]="'outline-black'" [buttonText]="'ENTRAR'" [fullWidth]="true"></app-dynamic-btn>
+          <ion-spinner *ngIf="showAuthSpinner" class="auth-login-spinner"></ion-spinner>
 
           <div class="auth-link-container">
             <ion-text class="auth-link-label">Não possui uma conta?<a class="auth-link" (click)="moveRouteForward('sign-up')">Cadastre-se</a></ion-text>

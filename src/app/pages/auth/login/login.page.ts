@@ -11,6 +11,7 @@ import {AuthService} from '../../../services/auth.service';
 })
 export class LoginPage {
   loginForm: FormGroup;
+  showAuthSpinner: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -27,12 +28,17 @@ export class LoginPage {
     void this.navControl.navigateForward(url);
   }
 
-  onLoginSubmit(): void {
+  onLoginSubmit(event: Event): void {
+    event.preventDefault();
+    this.showAuthSpinner = true;
     const loginFormData: ILoginInterface = this.loginForm.value;
     if (this.loginForm.valid && loginFormData) {
       this.authService.login(loginFormData).then((): void => {
+        this.showAuthSpinner = false;
         this.moveRouteForward('my-cars-list');
       });
+    } else {
+      this.showAuthSpinner = false;
     }
   }
 
