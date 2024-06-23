@@ -12,7 +12,7 @@ export class SplashScreenInPage {
   constructor(private navControl: NavController) { }
 
   ionViewWillEnter(): void {
-    this.isLoggedUser = this.checkLoggedUser()
+    this.isLoggedUser = this.checkLoggedUser();
   }
 
   navigateUserRoute(redirectTarget: 'login' | 'sign-up'): void {
@@ -20,7 +20,7 @@ export class SplashScreenInPage {
   }
 
   checkLoggedUser(): boolean {
-    return false;
-    // checar se o usuário ja está logado, caso sim, ira redirecionar o user para a home
+    const user: string | null = localStorage.getItem('user');
+    return !!user;
   }
 }
