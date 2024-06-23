@@ -23,6 +23,8 @@
     "@angular/platform-browser-dynamic": "^18.0.3",
     "@angular/router": "^18.0.3",
     "@angular/service-worker": "^18.0.3",
+    "@awesome-cordova-plugins/core": "^6.7.0",
+    "@awesome-cordova-plugins/deeplinks": "^6.7.0",
     "@capacitor/app": "6.0.0",
     "@capacitor/core": "6.0.0",
     "@capacitor/haptics": "6.0.0",

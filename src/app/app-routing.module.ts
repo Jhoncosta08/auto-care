@@ -31,6 +31,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/auth/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
   },
   {
+    path: 'redefine-password',
+    loadChildren: () => import('./pages/auth/redefine-password/redefine-password.module').then(m => m.RedefinePasswordPageModule)
+  },
+  {
     path: 'my-car/:carId',
     loadChildren: () => import('./pages/my-car/my-car.module').then(m => m.MyCarPageModule),
     canActivate: [AuthGuard],

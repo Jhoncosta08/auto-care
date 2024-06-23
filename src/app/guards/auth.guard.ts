@@ -12,7 +12,7 @@ export const AuthGuard: CanActivateFn = async (): Promise<boolean> => {
     return true;
   } else {
     localStorage.removeItem('user');
-    void router.navigate(['/login']);
+    void router.navigate(['/splash-screen-in']);
     return false;
   }
 };

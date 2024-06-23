@@ -7,11 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: ForgotPasswordPage
-  },  {
-    path: 'forgot-password-confirm',
-    loadChildren: () => import('./forgot-password-confirm/forgot-password-confirm.module').then( m => m.ForgotPasswordConfirmPageModule)
-  }
-
+  },
+  {
+    path: 'email-send',
+    loadChildren: () => import('./email-send/email-send.module').then( m => m.EmailSendPageModule)
+  },
 ];
 
 @NgModule({

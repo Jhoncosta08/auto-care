@@ -91,4 +91,19 @@ export class AuthService {
     }
   }
 
+  async forgotPassword(email: string): Promise<void> {
+    if (email) {
+      try {
+        await this.authFire.sendPasswordResetEmail(email);
+        return Promise.resolve();
+      } catch (err: any) {
+        console.error('Error in forgot password', err);
+        return Promise.reject(err);
+      }
+    } else {
+      console.error('Error in forgot password, invalid email!');
+      return Promise.reject('Invalid email');
+    }
+  }
+
 }

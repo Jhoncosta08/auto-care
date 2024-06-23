@@ -10,6 +10,7 @@ import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import {Deeplinks} from '@awesome-cordova-plugins/deeplinks/ngx';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    provideHttpClient(withInterceptorsFromDi())
+    provideHttpClient(withInterceptorsFromDi()),
+    Deeplinks
   ],
   bootstrap: [AppComponent],
 })
