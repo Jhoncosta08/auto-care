@@ -1,0 +1,19 @@
+<ion-row class="success-item-container">
+  <ion-col class="success-item-card">
+    <ion-icon class="success-item-icon" *ngIf="successPageType === 'email-send-success'" name="mail-outline"></ion-icon>
+    <ion-icon class="success-item-icon" *ngIf="successPageType === 'redefine-password-success'" name="key-outline"></ion-icon>
+    <h1>{{ successPageTitle }}</h1>
+    <p class="success-item-text">{{ successPageText }}</p>
+    <p class="success-item-value-to-show" *ngIf="valueToShow">{{ valueToShow }}</p>
+
+    <app-dynamic-btn
+      (buttonAction)="backToStart()"
+      [buttonText]="'VOLTAR PARA O INÍCIO'"
+      [buttonDisable]="false"
+      [buttonStyle]="'outline'"
+      [fullWidth]="false"
+      [buttonType]="'button'">
+    </app-dynamic-btn>
+
+  </ion-col>
+</ion-row>

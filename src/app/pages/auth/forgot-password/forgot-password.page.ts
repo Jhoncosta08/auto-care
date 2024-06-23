@@ -29,7 +29,7 @@ export class ForgotPasswordPage {
     const {email} = this.forgotForm.value;
     if (this.forgotForm.valid && email) {
       this.authService.forgotPassword(email).then((): void => {
-        void this.navControl.navigateForward('email-send');
+        void this.navControl.navigateForward(`email-send/${email}`);
       });
     }
   }

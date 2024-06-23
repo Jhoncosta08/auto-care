@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ForgotPasswordPage
   },
   {
-    path: 'email-send',
+    path: 'email-send/:email',
     loadChildren: () => import('./email-send/email-send.module').then( m => m.EmailSendPageModule)
   },
 ];

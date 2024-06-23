@@ -1,13 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>email-send</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-grid>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">email-send</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <app-success-page-item
+      [successPageType]="'email-send-success'"
+      [successPageTitle]="'EMAIL ENVIADO'"
+      [successPageText]="'Um email com o link para redefinir sua senha foi enviado para o email cadastrado.'"
+      [valueToShow]="userEmail">
+    </app-success-page-item>
+
+  </ion-grid>
 </ion-content>

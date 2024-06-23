@@ -1,0 +1,46 @@
+
+.success-item-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-item-card {
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  min-height: 20rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #bebebe 0%, rgb(0, 0, 0) 60%);
+  box-shadow: 3px 3px 5px -1px var(--ion-color-secondary);
+
+  & .success-item-icon {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  };
+
+  & h1 {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: var(--ion-color-secondary);
+  };
+
+  & .success-item-text {
+    margin: 1rem 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--ion-color-secondary);
+  };
+
+  & .success-item-value-to-show {
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ion-color-tertiary);
+  }
+
+}

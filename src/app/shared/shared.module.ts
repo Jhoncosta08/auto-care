@@ -9,6 +9,7 @@ import {CarLogoPipe} from '../pipes/car-logo.pipe';
 import {DateGroupItemComponent} from './components/car-services-components/date-group-item/date-group-item.component';
 import {ServiceCardComponent} from './components/car-services-components/service-card/service-card.component';
 import {TitleAddComponent} from './components/title-add/title-add.component';
+import {SuccessPageItemComponent} from './components/success-page-item/success-page-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {TitleAddComponent} from './components/title-add/title-add.component';
     CarCardListItemComponent,
     DateGroupItemComponent,
     ServiceCardComponent,
-    TitleAddComponent
+    TitleAddComponent,
+    SuccessPageItemComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import {TitleAddComponent} from './components/title-add/title-add.component';
     CarCardListItemComponent,
     DateGroupItemComponent,
     ServiceCardComponent,
-    TitleAddComponent
+    TitleAddComponent,
+    SuccessPageItemComponent
   ]
 })
 export class SharedModule { }

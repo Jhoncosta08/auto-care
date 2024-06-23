@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RedefineConfirmPageRoutingModule } from './redefine-confirm-routing.module';
 
 import { RedefineConfirmPage } from './redefine-confirm.page';
+import {SharedModule} from '../../../../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RedefineConfirmPageRoutingModule
+    RedefineConfirmPageRoutingModule,
+    SharedModule
   ],
   declarations: [RedefineConfirmPage]
 })
