@@ -21,7 +21,9 @@ export class AppComponent {
 
   private initializedApp(): void {
     this.platform.ready().then((): void => {
-      this.deepLinksService.initDeepLinks();
+      if (this.platform.is('cordova') || this.platform.is('capacitor')) {
+        this.deepLinksService.initDeepLinks();
+      }
     });
   }
 

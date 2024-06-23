@@ -9,7 +9,7 @@ export class DeepLinksService {
 
   constructor(
     private deepLinks: Deeplinks,
-    private navControl: NavController,
+    private navControl: NavController
   ) { }
 
   public initDeepLinks(): void {

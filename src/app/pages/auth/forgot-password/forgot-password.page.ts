@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NavController} from '@ionic/angular';
+import {AuthService} from '../../../services/auth.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -10,7 +11,11 @@ import {NavController} from '@ionic/angular';
 export class ForgotPasswordPage {
   forgotForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private navControl: NavController) {
+  constructor(
+    private fb: FormBuilder,
+    private navControl: NavController,
+    private authService: AuthService,
+  ) {
     this.forgotForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
     });
@@ -21,9 +26,11 @@ export class ForgotPasswordPage {
   }
 
   onForgotSubmit(): void {
-    if (this.forgotForm.valid) {
-      console.log('Form: ', this.forgotForm);
-      void this.navControl.navigateForward('forgot-password-confirm');
+    const {email} = this.forgotForm.value;
+    if (this.forgotForm.valid && email) {
+      this.authService.forgotPassword(email).then((): void => {
+        void this.navControl.navigateForward('email-send');
+      });
     }
   }
 
