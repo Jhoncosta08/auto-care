@@ -109,7 +109,6 @@ export class AuthService {
   async resetPassword(newPassword: string, oobCode: string): Promise<void> {
     try {
       await this.authFire.confirmPasswordReset(oobCode, newPassword);
-      console.log('Password reset successful');
       return Promise.resolve();
     } catch (err: any) {
       console.error('Error in password reset', err);
