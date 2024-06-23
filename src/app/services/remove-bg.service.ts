@@ -13,7 +13,7 @@ export class RemoveBgService {
 
   removeBackground(image: File): Observable<Blob> {
     const formData: FormData = new FormData();
-    formData.append('image_file', image);
+    formData.append('image_file', image, 'image.png');
     formData.append('size', 'auto');
     return this.http.post(this.apiUrl, formData, {
       headers: {'X-Api-Key': this.apiKey}, responseType: 'blob'
