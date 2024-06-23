@@ -18,9 +18,7 @@ export class AuthService {
     private authFire: AngularFireAuth,
     private firestore: AngularFirestore,
     private navControl: NavController,
-  ) {
-    this.user.next(JSON.parse(localStorage.getItem('user')!));
-  }
+  ) {}
 
   async registerUser(user: IUserInterface): Promise<void> {
     if (user && user.email && user.password) {
@@ -113,6 +111,14 @@ export class AuthService {
     } catch (err: any) {
       console.error('Error in password reset', err);
       return Promise.reject(err);
+    }
+  }
+
+  autoLogin(): void {
+    const savedUser: string | null = localStorage.getItem('user');
+    if (savedUser) {
+      const userData: IUserInterface = JSON.parse(savedUser);
+      this.user.next(userData);
     }
   }
 

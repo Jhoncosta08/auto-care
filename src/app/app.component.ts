@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 import {Platform} from '@ionic/angular';
 import {DeepLinksService} from './services/deep-links.service';
+import {AuthService} from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +15,10 @@ export class AppComponent {
   constructor(
     private router: Router,
     private platform: Platform,
-    private deepLinksService: DeepLinksService
+    private deepLinksService: DeepLinksService,
+    private authService: AuthService,
   ) {
+    void this.authService.autoLogin();
     this.initializedApp();
   }
 
