@@ -10,6 +10,7 @@ import {AuthService} from '../../../services/auth.service';
 })
 export class ForgotPasswordPage {
   forgotForm: FormGroup;
+  showForgotPasswordSpinner: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -25,11 +26,16 @@ export class ForgotPasswordPage {
     void this.navControl.navigateForward('login');
   }
 
-  onForgotSubmit(): void {
+  onForgotSubmit(event: Event): void {
+    event.preventDefault();
     const {email} = this.forgotForm.value;
     if (this.forgotForm.valid && email) {
+      this.showForgotPasswordSpinner = true;
       this.authService.forgotPassword(email).then((): void => {
-        void this.navControl.navigateForward(`email-send/${email}`);
+        this.showForgotPasswordSpinner = false;
+        void this.navControl.navigateForward(`forgot-password/email-send/${email}`);
+      }).catch((): void => {
+        this.showForgotPasswordSpinner = false;
       });
     }
   }
